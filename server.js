@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['https://meditation-timer-1q8rilsbo-login-ss-projects.vercel.app', 'http://localhost:5173', 'http://localhost:3000'],
+  origin: ['meditation-timer-jel41b43l-login-ss-projects.vercel.app', 'http://localhost:5173', 'http://localhost:3000'],
   credentials: true
 }));
 app.use(express.json());
