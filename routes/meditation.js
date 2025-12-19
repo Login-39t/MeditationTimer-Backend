@@ -7,5 +7,8 @@ const router = express.Router();
 router.post('/session', protect, createSession);
 router.get('/sessions', protect, getUserSessions);
 router.get('/stats', protect, getSessionStats);
+router.get('/timer', (req, res) => {
+  res.json({ message: 'Timer endpoint', status: 'active' });
+});
 
 module.exports = router;
