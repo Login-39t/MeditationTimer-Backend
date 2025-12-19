@@ -23,6 +23,10 @@ app.get('/api', (req, res) => {
   res.json({ message: 'API is working' });
 });
 
+app.get('/timer', (req, res) => {
+  res.json({ message: 'Timer endpoint', status: 'active' });
+});
+
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/meditation', require('./routes/meditation'));
