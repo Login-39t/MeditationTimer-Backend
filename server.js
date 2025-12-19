@@ -14,6 +14,15 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/meditatio
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
+// Health check route
+app.get('/', (req, res) => {
+  res.json({ message: 'Meditation Timer Backend API' });
+});
+
+app.get('/api', (req, res) => {
+  res.json({ message: 'API is working' });
+});
+
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/meditation', require('./routes/meditation'));
